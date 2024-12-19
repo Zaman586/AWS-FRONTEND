@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman Anwar - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .visitor-counter {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-style: italic;
+            color: #555;
+        }
+
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .skills, .education {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skills div, .education div {
+            width: 48%;
+        }
+
+        .skills ul, .education ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills ul li, .education ul li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+    <script>
+        async function fetchVisitorCount() {
+            const response = await fetch('https://c3m513ityb.execute-api.us-east-1.amazonaws.com/prod/visitors');
+            const data = await response.json();
+            document.getElementById('visitorCount').innerText = ' Visitor Count: ' + data.count;
+        }
+        
+        fetchVisitorCount();        
+    </script>
+</head>
+<body>
+    <div class="visitor-counter">
+        Visitor Count: <span id="visitorCount">0</span>
+    </div>
+
+    <div class="container">
+        <h1>Zaman Anwar</h1>
+        <div class="contact-info">
+            <p>Phone: +92 323 6164830</p>
+            <p>Email: zamananwar856@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/zaman-anwar">www.linkedin.com/in/zaman-anwar</a></p>
+        </div>
+
+        <div class="section">
+            <h2>OBJECTIVE</h2>
+            <p>To secure a position in a dynamic organization, where I can make the best use of my abilities, particularly as a team player, while continuously improving my technical skills in areas such as cloud computing, automation, and DevOps best practices. I aim to contribute to the organization's growth while enhancing my leadership, problem-solving, and collaboration skills in a professional environment.</p>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+
+            <h3>DevOps Engineer</h3>
+            <p class="job-title">OpsOura, Islamabad, Pakistan | Jun 2024 – Present</p>
+            <ul>
+                <li>Designed and managed CI/CD pipelines using GitHub Actions, Jenkins, and GitLab CI.</li>
+                <li>Containerized applications with Docker and efficiently managed multiple environments.</li>
+                <li>Set up monitoring and alerting systems with Prometheus, Grafana, and the ELK Stack for performance optimization.</li>
+                <li>Configured and optimized NGINX as a reverse proxy and web server for various applications, improving performance and security.</li>
+                <li>Implemented Infrastructure as Code (IaC) solutions using Ansible, ensuring scalable infrastructure management.</li>
+                <li>Collaborated with development teams to troubleshoot and resolve environment-related issues.</li>
+                <li>Enforced security best practices, including key management and SSL/TLS configuration.</li>
+                <li>Leveraged Git for version control, managing repositories and collaborating on code changes.</li>
+            </ul>
+
+            <h3>IT Assistant</h3>
+            <p class="job-title">Confidential | September 2016 – May 2024</p>
+            <ul>
+                <li>Facilitated public interactions and addressed client queries, ensuring effective communication between the organization and stakeholders.</li>
+                <li>Managed official communications, including drafting and responding to emails, preparing reports, and maintaining records.</li>
+                <li>Coordinated and led IT-based initiatives, focusing on the implementation and management of technology solutions to enhance operational efficiency.</li>
+                <li>Provided technical support for hardware and software issues, troubleshooting problems to ensure minimal downtime.</li>
+                <li>Assisted in maintaining the organization's IT infrastructure, including network configurations and system updates.</li>
+                <li>Ensured data security and compliance with organizational policies by managing user access and monitoring IT systems.</li>
+                <li>Organized training sessions for staff to ensure the effective use of new software and IT tools.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>SKILLS</h2>
+            <div class="skills">
+                <div>
+                    <h3>Technical Expertise:</h3>
+                    <ul>
+                        <li>Scripting</li>
+                        <li>CI/CD Pipeline Development</li>
+                        <li>Containerization</li>
+                        <li>Clustering</li>
+                        <li>Linux Administration</li>
+                        <li>Network Monitoring</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tools:</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Jenkins</li>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>Nginx</li>
+                        <li>Apache Web Server</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <div class="education">
+                <div>
+                    <h3>Bachelor of Science (Hons) in Computer Science</h3>
+                    <ul>
+                        <li>University of Gujrat, Gujrat, Pakistan</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>2012 - 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2024 Zaman Anwar. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
